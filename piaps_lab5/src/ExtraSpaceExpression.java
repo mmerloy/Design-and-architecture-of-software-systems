@@ -7,12 +7,12 @@ public class ExtraSpaceExpression implements Expression
     {
         for (int i = 0; i < text.size(); i++)
         {
-            text.set(i , text.get(i).replaceAll("\\s{2,}", " "));
             text.set(i , text.get(i).replaceAll("\\(\\s+", "("));
             text.set(i , text.get(i).replaceAll("\\s+\\)", ")"));
             text.set(i , text.get(i).replaceAll("\\s+,", ", "));//можно и в одно
             text.set(i , text.get(i).replaceAll("\\s+\\.", ". "));
 
+            text.set(i , text.get(i).replaceAll("\\s{2,}", " "));
         }
         return text;
     }

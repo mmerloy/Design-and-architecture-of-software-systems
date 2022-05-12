@@ -1,5 +1,9 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
 
@@ -19,13 +23,13 @@ public class Main {
             e.printStackTrace();
         }
 
-        text = (new DefisExpression()).interpret(text);
-        text = (new ExtraEnterExpression()).interpret(text);
-        text = (new ExtraSpaceExpression()).interpret(text);
-        text = (new QuoteExpression()).interpret(text);
-        System.out.println("---------------------");
+        Context context = new Context();
+        System.out.println("********************************************\n");
+        Expression expression = context.evaluate(text);
         for (String s : text) {
             System.out.println(s);
         }
+
     }
 }
+
