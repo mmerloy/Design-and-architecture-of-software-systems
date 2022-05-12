@@ -28,6 +28,11 @@ public class Kafedra implements Observer
         teachers.add(teacher);
     }
 
+    public void removeTeachers(Observer teacher)
+    {
+        teachers.remove(teacher);
+    }
+
     @Override
     public String Update()
     {

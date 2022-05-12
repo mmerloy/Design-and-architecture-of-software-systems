@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
@@ -7,10 +5,10 @@ public class Main {
     {
         Decanat decanat = new Decanat();
 
-        Kafedra kafedra = new Kafedra("Spintech");
-        Teacher teacher1 = new Teacher("Ivanov","DataBases");
-        Teacher teacher2 = new Teacher("Petrov", "C++");
-        Teacher teacher3 = new Teacher("Sidorov", "OpenMP");
+        Kafedra kafedra = new Kafedra("Кафедра1");
+        Teacher teacher1 = new Teacher("Преподаватель1","Предмет1");
+        Teacher teacher2 = new Teacher("Преподаватель2", "Предмет2");
+        Teacher teacher3 = new Teacher("Преподаватель3", "Предмет3");
 
         kafedra.AddTeachers(teacher1);
         kafedra.AddTeachers(teacher2);
@@ -23,6 +21,10 @@ public class Main {
 
         decanat.notifyObserver();
 
+        System.out.println();
+
+        kafedra.removeTeachers(teacher3);
+        decanat.notifyObserver();
         System.out.println();
     }
 }

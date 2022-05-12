@@ -4,11 +4,11 @@ import java.util.List;
 public class Decanat implements Observed
 {
 
-    ArrayList<Observer> observers = new ArrayList<Observer>();
+    ArrayList<Observer> observers;
 
     public Decanat()
     {
-        observers = new ArrayList<Observer>();
+        observers = new ArrayList<>();
     }
 
     @Override

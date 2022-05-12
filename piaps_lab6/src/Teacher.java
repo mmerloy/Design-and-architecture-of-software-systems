@@ -26,6 +26,12 @@ public class Teacher implements Observer {
         this.currentPerfomance = random.nextInt(1, 5);
     }
 
+
+    public void removeObserver(Observer a)
+    {
+        observers.remove(a);
+    }
+
     @Override
     public String Update() {
         String view = "";
